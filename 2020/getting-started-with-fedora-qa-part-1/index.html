@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Getting Started with Fedora QA - Part 1 - Nasir Hussain&#39;s Blog</title>
+  <meta name="description" content="What is SQA (Quality Assurance) ? According to Wikipedia : Software quality assurance (SQA) is a means of monitoring the software engineering processes and methods used to ensure proper quality. SQA encompasses the entire software development process, including requirements definition, software design, coding, code reviews, source code control, software configuration management, testing, release management and product integration. It is organized into goals, commitments, abilities, activities, measurements and verification.">
+  <meta name="author" content="Nasir Hussain"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Nasir Hussain\u0027s Blog",
+    
+    "url": "https:\/\/nasirhm.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/nasirhm.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/nasirhm.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/nasirhm.github.io\/2020\/getting-started-with-fedora-qa-part-1\/",
+          "name": "Getting started with fedora q a part 1"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Nasir Hussain"
+  },
+  "headline": "Getting Started with Fedora QA - Part 1",
+  "description" : "What is SQA (Quality Assurance) ? According to Wikipedia : Software quality assurance (SQA) is a means of monitoring the software engineering processes and methods used to ensure proper quality. SQA encompasses the entire software development process, including requirements definition, software design, coding, code reviews, source code control, software configuration management, testing, release management and product integration. It is organized into goals, commitments, abilities, activities, measurements and verification.",
+  "inLanguage" : "en",
+  "wordCount":  580 ,
+  "datePublished" : "2020-04-07T17:29:03",
+  "dateModified" : "2020-04-07T17:29:03",
+  "image" : "https:\/\/nasirhm.github.io\/img\/avatar-icon.png",
+  "keywords" : [ "fedora, qa, foss, fedora-qa" ],
+  "mainEntityOfPage" : "https:\/\/nasirhm.github.io\/2020\/getting-started-with-fedora-qa-part-1\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/nasirhm.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/nasirhm.github.io\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Getting Started with Fedora QA - Part 1" />
+<meta property="og:description" content="What is SQA (Quality Assurance) ? According to Wikipedia : Software quality assurance (SQA) is a means of monitoring the software engineering processes and methods used to ensure proper quality. SQA encompasses the entire software development process, including requirements definition, software design, coding, code reviews, source code control, software configuration management, testing, release management and product integration. It is organized into goals, commitments, abilities, activities, measurements and verification.">
+<meta property="og:image" content="https://nasirhm.github.io/img/avatar-icon.png" />
+<meta property="og:url" content="https://nasirhm.github.io/2020/getting-started-with-fedora-qa-part-1/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nasir Hussain&#39;s Blog" />
+
+  <meta name="twitter:title" content="Getting Started with Fedora QA - Part 1" />
+  <meta name="twitter:description" content="What is SQA (Quality Assurance) ? According to Wikipedia : Software quality assurance (SQA) is a means of monitoring the software engineering processes and methods used to ensure proper quality. SQA …">
+  <meta name="twitter:image" content="https://nasirhm.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@_nasirhm_" />
+  <meta name="twitter:creator" content="@_nasirhm_" />
+  <link href='https://nasirhm.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="alternate" href="https://nasirhm.github.io/index.xml" type="application/rss+xml" title="Nasir Hussain&#39;s Blog"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://nasirhm.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://nasirhm.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://nasirhm.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-F67DV7S0JL', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://nasirhm.github.io">Nasir Hussain&#39;s Blog</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Talks" href="/talks/">Talks</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Categories" href="/categories/">Categories</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags/">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Nasir Hussain&#39;s Blog" href="https://nasirhm.github.io">
+            <img class="avatar-img" src="https://nasirhm.github.io/img/avatar-icon.png" alt="Nasir Hussain&#39;s Blog" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-heading">
+              
+                <h1>Getting Started with Fedora QA - Part 1</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <blockquote>
+<!-- raw HTML omitted -->
+</blockquote>
+<h2 id="what-is-sqa-quality-assurance-">What is SQA (Quality Assurance) ?</h2>
+<p>According to <a href="https://en.wikipedia.org/wiki/Software_quality_assurance">Wikipedia</a> : <strong>Software quality assurance (SQA)</strong> is a means of monitoring the software engineering processes and methods used to ensure proper quality. SQA encompasses the entire software development process, including requirements definition, software design, coding, code reviews, source code control, software configuration management, testing, release management and product integration. It is organized into goals, commitments, abilities, activities, measurements and verification.</p>
+<p>By simplifying, Software Quality Assurance is a way to ensure that the Code/Software that a developer has written has been tested across different mediums and produces the expected results.</p>
+<h2 id="why-quality-assurance-is-an-essential-component-for-fedora-project">Why Quality Assurance is an essential component for Fedora Project</h2>
+<p>Fedora is an Open Source Linux distribution Operating System which releases once in every six months and as a result the environment becomes very fast paced and that could make things break among general users of the distro, to prevent that to happening to users &amp; to make sure everything works as expected, Quality Assurance is a must in Fedora Project. In Fedora, we have to encompass the user experience as there are thousands and thousands of people who expect a more stable &amp; feature enriched OS that gets better with each release.</p>
+<h2 id="fedora-release-cycle">Fedora Release Cycle</h2>
+<p>Before we jump into practical tools, let&rsquo;s have a quick introduction to how the process works</p>
+<p><img src="/images/posts-static/getting-started-with-fedora-qa/fedorareleasecycle.png#align:left" alt="Fedora Release Cycle"></p>
+<p>The above diagram displays a clear demonstration of how Fedora creates it&rsquo;s release</p>
+<p>It includes these branches:</p>
+<p><strong>Rawhide</strong> serves as the upstream for the release branch, it&rsquo;s a bleeding edge, non freezing branch where contributors consitently push their packages, after a time slice we branch out different necessary packages and the Rawhide keeps on growing.</p>
+<p><strong>Branched Release</strong> is the version which gets branched out from the ongoing Rawhide &amp; starts to get tested &amp; refines for the release. As we reach this point, the QA team gets hands on with it :)</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<h3 id="fas-id--httpsadminfedoraprojectorgaccountshttpsadminfedoraprojectorgaccounts">FAS ID : <a href="https://admin.fedoraproject.org/accounts/">https://admin.fedoraproject.org/accounts/</a></h3>
+<p>A FAS (Fedora Account System) account is essential for you to get login access to all subprojects in Fedora with the same user ID and passwords.</p>
+<h3 id="bugzilla--httpsbugzillaredhatcomhttpsbugzillaredhatcom">Bugzilla : <a href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a></h3>
+<p>Bugzilla serves as the bug tracking system for Fedora Project, with Bugzilla you can create &amp; verify bugs along with fixing some! :)</p>
+<p><strong>To register on Bugzilla</strong>, We recommend using your <code>@fedoraproject.org</code> email Alias, because in different places for QA you would require it.</p>
+<p><strong>NOTE</strong> : If you don&rsquo;t have a <code>@fedoraproject.org</code> email Alias, We have a good news for you, you can reach out to us on <a href="https://docs.fedoraproject.org/en-US/fedora-join/">Fedora Join</a> and we can provide you a temporary membership, which would give you the ability to attain your email Alias.</p>
+<p>After setting up your accounts, you can reach out to the <em>QA Team</em> on <strong>IRC</strong>, As it&rsquo;s the place where most of the QA team is available, The channel for Fedora QA is: <code>#fedora-qa</code> and for Matrix users, It&rsquo;s: <code>#freenode_#fedora-qa:matrix.org</code></p>
+<p>Another alternative to IRC, is mailing lists where you can have discussions with Fedora QA team, in case if you need any clarification or being faced by issues. Mailing list requires you to subscribe to it before you can post/ask/talk. The fedora QA mailing list resides here : <a href="https://lists.fedoraproject.org/admin/lists/test.lists.fedoraproject.org/">test</a></p>
+<p>To subscribe to the mailing list you would need a FAS ID too.</p>
+<p>Best of luck for starting QA with Fedora Project.</p>
+<p>The next post would be more about getting involved and hands on with QA.</p>
+<hr>
+<p>Thank You for reading, if you have any doubts or questions feel free to reach out to me here : <a href="/contact/">Contact</a></p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://nasirhm.github.io/tags/fedora/">fedora</a>&nbsp;
+            
+              <a href="https://nasirhm.github.io/tags/qa/">qa</a>&nbsp;
+            
+              <a href="https://nasirhm.github.io/tags/foss/">foss</a>&nbsp;
+            
+              <a href="https://nasirhm.github.io/tags/fedora-qa/">fedora-qa</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fnasirhm.github.io%2f2020%2fgetting-started-with-fedora-qa-part-1%2f&amp;text=Getting%20Started%20with%20Fedora%20QA%20-%20Part%201&amp;via=_nasirhm_" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fnasirhm.github.io%2f2020%2fgetting-started-with-fedora-qa-part-1%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fnasirhm.github.io%2f2020%2fgetting-started-with-fedora-qa-part-1%2f&amp;title=Getting%20Started%20with%20Fedora%20QA%20-%20Part%201" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fnasirhm.github.io%2f2020%2fgetting-started-with-fedora-qa-part-1%2f&amp;title=Getting%20Started%20with%20Fedora%20QA%20-%20Part%201" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fnasirhm.github.io%2f2020%2fgetting-started-with-fedora-qa-part-1%2f&amp;title=Getting%20Started%20with%20Fedora%20QA%20-%20Part%201" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fnasirhm.github.io%2f2020%2fgetting-started-with-fedora-qa-part-1%2f&amp;description=Getting%20Started%20with%20Fedora%20QA%20-%20Part%201" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/2020/badge-i-voted-f33/">Gotta Badge &#39;Em All: I Voted: Fedora 33 -- Participated in the Fedora 33 Elections!</a></li>
+                
+                    <li><a href="/2020/badge-fedora-social-hour/">Gotta Badge &#39;Em All: Fedora Social Panda</a></li>
+                
+                    <li><a href="/2020/badge-fedora-centos-social-summit20/">Gotta Badge &#39;Em All: Fedora &amp; CentOS Social @ Summit 2020</a></li>
+                
+                    <li><a href="/talks/intro-foss-and-fedora-15-02-20/">Introduction to FOSS and Fedora Project</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+            <li class="next">
+              <a href="https://nasirhm.github.io/2020/badge-fedora-centos-social-summit20/" data-toggle="tooltip" data-placement="top" title="Gotta Badge &#39;Em All: Fedora &amp; CentOS Social @ Summit 2020">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:nasirhussainm14@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/nasirhm" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/_nasirhm_" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/nasirhm" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="nasirhm.github.io">Nasir Hussain</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://nasirhm.github.io">Nasir Hussain&#39;s Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.80.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://nasirhm.github.io/js/main.js"></script>
+<script src="https://nasirhm.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://nasirhm.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

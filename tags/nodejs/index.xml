@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodejs on Nasir Hussain&#39;s Blog</title>
+    <link>https://nasirhm.github.io/tags/nodejs/</link>
+    <description>Recent content in nodejs on Nasir Hussain&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>nasirhussainm14@gmail.com (Nasir Hussain)</managingEditor>
+    <webMaster>nasirhussainm14@gmail.com (Nasir Hussain)</webMaster>
+    <lastBuildDate>Wed, 20 Jan 2021 00:28:56 +0500</lastBuildDate><atom:link href="https://nasirhm.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running Pre-Built Binaries on Non-FHS *NIX Systems</title>
+      <link>https://nasirhm.github.io/2021/binaries-on-non-fhs-system/</link>
+      <pubDate>Wed, 20 Jan 2021 00:28:56 +0500</pubDate>
+      <author>nasirhussainm14@gmail.com (Nasir Hussain)</author>
+      <guid>https://nasirhm.github.io/2021/binaries-on-non-fhs-system/</guid>
+      <description>Executing pre-built binaries on a new system can be a troublesome task to perform. Several exceptions can occur causing the execution to fail.
+We&amp;rsquo;ll be looking at one of such that can occur on Linux systems quite often, which is: The file &#39;&amp;lt;executable_file_name&amp;gt;&#39; does not exist or could not be executed.
+This exception occurs when it is unable to find one of the ELF libraries required to execute the binary.</description>
+    </item>
+    
+  </channel>
+</rss>

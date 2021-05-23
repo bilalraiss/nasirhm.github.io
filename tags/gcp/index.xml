@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gcp on Nasir Hussain&#39;s Blog</title>
+    <link>https://nasirhm.github.io/tags/gcp/</link>
+    <description>Recent content in gcp on Nasir Hussain&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>nasirhussainm14@gmail.com (Nasir Hussain)</managingEditor>
+    <webMaster>nasirhussainm14@gmail.com (Nasir Hussain)</webMaster>
+    <lastBuildDate>Sun, 23 May 2021 19:25:32 +0500</lastBuildDate><atom:link href="https://nasirhm.github.io/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring Google Cloud: Pub/Sub 101</title>
+      <link>https://nasirhm.github.io/2021/exploring-google-cloud-pubsub/</link>
+      <pubDate>Sun, 23 May 2021 19:25:32 +0500</pubDate>
+      <author>nasirhussainm14@gmail.com (Nasir Hussain)</author>
+      <guid>https://nasirhm.github.io/2021/exploring-google-cloud-pubsub/</guid>
+      <description>In the past few days, I&amp;rsquo;ve been exploring services in Google Cloud Platform and I&amp;rsquo;ll be writing a series as &amp;ldquo;Exploring Google Cloud&amp;rdquo; to write about my learnings and take aways here.
+In this series, I&amp;rsquo;ll be writing about Google Cloud Products which we can explore in our 300$ trial period.
+We&amp;rsquo;ll be starting with one of the awesome products provided to us by Google Cloud called Pub/Sub.
+What is Cloud Pub/Sub?</description>
+    </item>
+    
+  </channel>
+</rss>

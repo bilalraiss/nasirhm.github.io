@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Nasir Hussain&#39;s Blog</title>
+    <link>https://nasirhm.github.io/categories/</link>
+    <description>Recent content in Categories on Nasir Hussain&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>nasirhussainm14@gmail.com (Nasir Hussain)</managingEditor>
+    <webMaster>nasirhussainm14@gmail.com (Nasir Hussain)</webMaster>
+    <lastBuildDate>Sun, 23 May 2021 19:25:32 +0500</lastBuildDate><atom:link href="https://nasirhm.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>google</title>
+      <link>https://nasirhm.github.io/categories/google/</link>
+      <pubDate>Sun, 23 May 2021 19:25:32 +0500</pubDate>
+      <author>nasirhussainm14@gmail.com (Nasir Hussain)</author>
+      <guid>https://nasirhm.github.io/categories/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://nasirhm.github.io/categories/linux/</link>
+      <pubDate>Wed, 20 Jan 2021 00:28:56 +0500</pubDate>
+      <author>nasirhussainm14@gmail.com (Nasir Hussain)</author>
+      <guid>https://nasirhm.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nix</title>
+      <link>https://nasirhm.github.io/categories/nix/</link>
+      <pubDate>Wed, 20 Jan 2021 00:28:56 +0500</pubDate>
+      <author>nasirhussainm14@gmail.com (Nasir Hussain)</author>
+      <guid>https://nasirhm.github.io/categories/nix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fedora</title>
+      <link>https://nasirhm.github.io/categories/fedora/</link>
+      <pubDate>Mon, 30 Nov 2020 03:04:54 +0500</pubDate>
+      <author>nasirhussainm14@gmail.com (Nasir Hussain)</author>
+      <guid>https://nasirhm.github.io/categories/fedora/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Talks</title>
+      <link>https://nasirhm.github.io/categories/talks/</link>
+      <pubDate>Sat, 15 Feb 2020 01:29:42 +0500</pubDate>
+      <author>nasirhussainm14@gmail.com (Nasir Hussain)</author>
+      <guid>https://nasirhm.github.io/categories/talks/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
